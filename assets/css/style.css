@@ -1,0 +1,169 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+#container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    text-align: center;
+    width: 100%;
+}
+
+#message h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+#message p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff3d2e;
+}
+
+#images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    display: none;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.love-text {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: none;
+}
+
+/* Modal para fullscreen de imagem */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    #message h1 {
+        font-size: 24px;
+    }
+
+    #message p {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .love-text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #container {
+        padding: 20px;
+    }
+
+    #message h1 {
+        font-size: 20px;
+    }
+
+    #message p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .love-text {
+        font-size: 18px;
+    }
+}
